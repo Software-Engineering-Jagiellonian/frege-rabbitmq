@@ -1,0 +1,161 @@
+{
+  "users":[
+    {
+      "name":"guest",
+      "password_hash":"KF6ZxIhEXptD77672ESl/OxA0GhmQfwEM+cqZjYRJOsLSRVK",
+      "hashing_algorithm":"rabbit_password_hashing_sha256",
+      "tags":"administrator"
+    }
+  ],
+  "vhosts":[
+    {
+      "name":"/"
+    }
+  ],
+  "permissions":[
+    {
+      "user":"guest",
+      "vhost":"/",
+      "configure":".*",
+      "write":".*",
+      "read":".*"
+    }
+  ],
+  "policies":[
+    {
+      "vhost":"/",
+      "name":"max-length",
+      "pattern":".*",
+      "apply-to":"queues",
+      "definition":{
+        "max-length":3,
+        "overflow":"reject-publish"
+      },
+      "priority":0
+    }
+  ],
+  "queues":[
+    {
+      "name":"download",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"extract",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-c",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-cpp",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-csharp",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-java",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-php",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-css",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-js",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-python",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"analyze-ruby",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    },
+    {
+      "name":"gc",
+      "vhost":"/",
+      "durable":true,
+      "auto_delete":false,
+      "arguments":{
+
+      },
+      "type":"classic"
+    }
+  ]
+}
+
+
